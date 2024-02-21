@@ -1,0 +1,42 @@
+import "reflect-metadata";
+import "../container/index";
+import "dotenv/config";
+import "express-async-errors";
+import cors from "cors";
+import express, { Request, Response, NextFunction } from "express";
+
+const app = express();
+
+app.use(express.json());
+app.use(cors());
+
+// Routa usários.
+app.use("/users", usersRoutes);
+app.use("/login", sessionRoute);
+
+// Rotas produtos
+app.use("/products", productsRoutes);
+
+// Rotas Reservas
+app.use("/reservations", reservationsRoutes);
+app.use(errors());
+
+// Middleware validação de erros.
+app.use((error: Error, request: Request, response: Response, next: NextFunction) => {
+  if (error instanceof AppError) {
+    return response.status(error.statusCode).json({
+      status: "error",
+      message: error.message,
+    });
+  }
+  // Interceptando o erro e mostrando no console.
+  console.log(error)
+  return response.status(500).json({
+    status: "error",
+    message: "Internal server error",
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Server is running in port: ${port}🚀`);
+});
