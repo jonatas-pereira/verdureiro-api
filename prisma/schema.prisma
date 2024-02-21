@@ -12,3 +12,50 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id         String    @id @default(uuid())
+  email      String    @unique
+  name       String
+  password   String
+  contact    String
+  created_at DateTime  @default(now())
+  update_at  DateTime  @updatedAt
+  products   Product[]
+
+  @@map("users")
+}
+
+model Product {
+  id           String        @id @default(uuid())
+  name         String        @unique
+  description  String
+  category     String
+  price        Decimal
+  quantity     Int
+  images       String?
+  userId       String
+  user_id      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  created_at   DateTime      @default(now())
+  update_at    DateTime      @updatedAt
+  Reservations Reservation[]
+
+  @@map("products")
+}
+
+model Reservation {
+  id                  String   @id @default(uuid())
+  name                String
+  email               String
+  address             String
+  quantityReservation Int
+  totalPrice          Decimal
+  id_product          Product  @relation(fields: [productId], references: [id])
+  productId           String
+  active              Boolean  @default(true)
+  contact             String
+  created_at          DateTime @default(now())
+  update_at           DateTime @updatedAt
+
+  @@map("reservations")
+}
