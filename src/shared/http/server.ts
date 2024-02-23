@@ -1,9 +1,15 @@
 import "reflect-metadata";
-//import "../container/index";
+import "../container/index";
 import "dotenv/config";
 import "express-async-errors";
 import cors from "cors";
 import express, { Request, Response, NextFunction } from "express";
+import AppError from "../errors/AppError";
+import { errors } from "celebrate";
+//import usersRoutes from "../../modules/users/http/routes/users.routes";
+//import sessionRoute from "../../modules/users/http/routes/session.routes";
+import productsRoutes from "../../modules/products/http/routes/products.routes";
+//import reservationsRoutes from "../../modules/reservations/http/routes/reservations.routes";
 const port = process.env.PORT;
 
 const app = express();
