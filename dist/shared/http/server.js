@@ -4,11 +4,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 require("reflect-metadata");
-//import "../container/index";
+require("../container/index");
 require("dotenv/config");
 require("express-async-errors");
 const cors_1 = __importDefault(require("cors"));
 const express_1 = __importDefault(require("express"));
+//import reservationsRoutes from "../../modules/reservations/http/routes/reservations.routes";
 const port = process.env.PORT;
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
