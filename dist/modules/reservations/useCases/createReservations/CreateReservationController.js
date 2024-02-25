@@ -9,25 +9,31 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateProfileController = void 0;
+exports.CreateReservationController = void 0;
 const tsyringe_1 = require("tsyringe");
-const UpdateProfileUseCase_1 = require("./UpdateProfileUseCase");
-class UpdateProfileController {
+const CreateReservationUseCase_1 = require("./CreateReservationUseCase");
+class CreateReservationController {
     handle(request, response) {
         return __awaiter(this, void 0, void 0, function* () {
-            const updateProfileUseCase = tsyringe_1.container.resolve(UpdateProfileUseCase_1.UpdateProfileUseCase);
-            const { name, contact } = request.body;
-            const userId = request.user.id;
-            const user = yield updateProfileUseCase.execute({ userId }, {
+            const createReservationUseCase = tsyringe_1.container.resolve(CreateReservationUseCase_1.CreateReservationUseCase);
+            const { id } = request.params;
+            const { name, email, address, quantityReservation, totalPrice, active, contact } = request.body;
+            const reservation = yield createReservationUseCase.execute({
                 name,
-                contact
+                email,
+                address,
+                quantityReservation,
+                totalPrice,
+                active,
+                contact,
+                productId: id
             });
-            return response.status(200).json({
-                message: "User updated successfully",
-                user
+            return response.status(201).json({
+                message: "reservation made successfully",
+                reservation
             });
         });
     }
 }
-exports.UpdateProfileController = UpdateProfileController;
-//# sourceMappingURL=UpdateProfileController.js.map
+exports.CreateReservationController = CreateReservationController;
+//# sourceMappingURL=CreateReservationController.js.map

@@ -6,14 +6,12 @@ export class UpdateProfileController{
   async handle(request: Request, response: Response): Promise<Response> {
     const updateProfileUseCase = container.resolve(UpdateProfileUseCase);
     const { name, contact } = request.body;
-    const avatar = request.file?.filename as string;
     const userId = request.user.id;
 
     const user = await updateProfileUseCase.execute(
       { userId },
       {
         name,
-        avatar,
         contact
       }
     );

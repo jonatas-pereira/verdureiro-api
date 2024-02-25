@@ -9,25 +9,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateProfileController = void 0;
+exports.CancelReservationController = void 0;
 const tsyringe_1 = require("tsyringe");
-const UpdateProfileUseCase_1 = require("./UpdateProfileUseCase");
-class UpdateProfileController {
+const CancelReservationUseCase_1 = require("./CancelReservationUseCase");
+class CancelReservationController {
     handle(request, response) {
         return __awaiter(this, void 0, void 0, function* () {
-            const updateProfileUseCase = tsyringe_1.container.resolve(UpdateProfileUseCase_1.UpdateProfileUseCase);
-            const { name, contact } = request.body;
-            const userId = request.user.id;
-            const user = yield updateProfileUseCase.execute({ userId }, {
-                name,
-                contact
-            });
+            const cancelReservationUseCase = tsyringe_1.container.resolve(CancelReservationUseCase_1.CancelReservationUseCase);
+            const { id } = request.params;
+            const reservation = yield cancelReservationUseCase.execute({ id });
             return response.status(200).json({
-                message: "User updated successfully",
-                user
+                message: "Reservation successfully deleted",
+                reservation
             });
         });
     }
 }
-exports.UpdateProfileController = UpdateProfileController;
-//# sourceMappingURL=UpdateProfileController.js.map
+exports.CancelReservationController = CancelReservationController;
+//# sourceMappingURL=CancelReservatiooController.js.map
