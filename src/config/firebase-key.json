@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "verdureirostorage",
+    "private_key_id": "07248f73625ea273e058c8e228f3a1e699bccfd9",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDjiMbP+X3BcJuQ\nJpQPaoC3Vk3Oalhrvz+pVs8KIaFHiwz3dkBDQgp9m+Bd6nrxm2SypwpZqHWNzoJh\n02Dh58ukev2C3Xvp6YeHsX8Tpca7+6v/bGWAi2kt9dJ0gLrWvOX7s9gX8NxrIVMy\nM6WWBTX3LK+Hca/6goFhHC8k7uFagDVLPGDYq5fLNIgKAcSlkBouQFpTCGmGbh69\nDy+/R3y9VqipjYPX/YCHMCaS3w0y37vGEy1/j2Ra35VI5gxU4CcQT+jRNesMc2WS\nUWGEnBRSOmai+9AJopOzGeyUr4fW6jluAuZ70lfzgShX498epf8rrACm7acALl4L\nDA58YqmpAgMBAAECggEAB94Tx8mv7jzLTZDz7NOJLK20hjG5qczEsgGGf6pu20cv\nf9gBfAHgKdHhEHDvkYPxbQGnHeIGtzb1MwDo2EQtpQaRVlF7u82/dLLvuq7FqtGB\nM+qxg3VulzBT4lji0lLY80WCRZOmaiLjxPgxs84C0ho5Xd98ZFcCYRNP0wEFNEiV\naQaa7GR51ZjzLMoVhEV4u74C406eyXXSLNfk21+YkotN/5KP/S8W1cn8Axn5MPTV\nf/QXAYhjfVsKOPuY0vfe0+oGxfnz0IUJPkpDWs1VUPB04jtoE7WAVA/6zc/CrV2n\nKM38pngKr2uD11xCMET5fNpLXp35Uyaqgw7nORTpoQKBgQDyZ5xFVGLW6gmMRgp5\neJlKrSaAe2j4toXr/Mvexn+DKKuj4P1Y3ZXTgZ2IBNmkhAVAC63LNRYTMTfn6Snr\nBo23TDosJIWQj0L1MqzYPJmZ0Tmy8X1VobbjqiLcFV1mZ9ZtO0Fa7NSbcaQ8OHjF\nOS+Hcb+fpZVzUMogIJmvGJTqWQKBgQDwS6jsxosPZ4hhC2ZbHIJpu0pp1+eBS/R6\nVja3YJsrZOoR8u32wg/IaXfeLPGT68BAPFINQe2lR3T7f+7WgLtaPcBiuMBOT2pc\n7LkXA5DuGSIpPu2iWyo9ngEC8hdgv7XQHo40jFfI00q6aTuvj1eZBmG62tbgWJWZ\n0exIZvEv0QKBgHan4QbO19L7nNDdOCNdtSuotkAOKMQWFFf/1oul/qTlM590co8d\naEmwGLyMIz00op1HGjtuMPAUF5mduLci7hvbZF5XQkoQ1mXP+Gugvk9c6zF8pC1W\ni3/FuGqiyqVmDsBJUSSA6VFtv0b7HaLs6ycRtwsesplP4qD3VEMxdTOBAoGARxC5\nNr1JJxcheEHc1ZlK4GYpjb/ykYSbGwsgR39kpKLFruU/hzjBXi4C60wzbeHNC7JL\nOeyDkdveNvsQ8ZNE1V1p5khpZz+JX04LN0kwtZntRnF76gY4Kdzuw6ZBT7Wi2ZgP\nym6vD4+djB/PLQ6hg3olsRNDdTn9lG5HCOqY7eECgYAiu5X1I4VnG+96y+njV6O/\nK7819gRwCzmI8BeeD9RU5pQ5Lt1cvwbVo+ZWFqo+mms2NXBLmKVYHMz+J+9FCJ8U\nZcDFbv7N1hye3VDlMWpOnMTuVF9UGwKfhVvQD3Owm7EzgQeMQAoFrd7FaXlObtlH\nKF8DtWcR/M7MoeieqMFj1A==\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-chsu5@verdureirostorage.iam.gserviceaccount.com",
+    "client_id": "114215275556976819622",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-chsu5%40verdureirostorage.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  
