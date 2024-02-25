@@ -425,7 +425,7 @@ A principal função da API é disponibilizar dados para o front-end do projeto 
 "message": "Reservation successfully deleted",
 "reservation": {
   "id": "9de27c35-d9a5-4001-88b6-16e307e554e2",
-  "name": "Murilo",
+  "name": "Nome do Cliente",
   "email": "algoritmos.2bsi@gmail.com",
   "quantityReservation": 5,
   "totalPrice": "10",
